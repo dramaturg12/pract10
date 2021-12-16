@@ -1,0 +1,8 @@
+dict_fib= {1: 1, 2: 1}
+
+def fib_mem(n):
+  num = dict_fib.get(n)
+  if num is None:
+     num = fib_mem(n-2) + fib_mem(n-1)
+     dict_fib[n] = num
+  return num
