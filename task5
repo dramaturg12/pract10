@@ -1,0 +1,8 @@
+dict_fib= {1: 1, 2: 1}
+
+def fib_mem_cyc(n):
+  num = dict_fib.get(n)
+  while num == None:
+     num = fib_mem_cyc(n-2) + fib_mem_cyc(n-1)
+     dict_fib[n] = num
+  return num
